@@ -1,0 +1,137 @@
+html, 
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{ /* Använder Grid  */
+  /*  padding: 10px;  bara en del av mitt eget arbete som ska bort*/
+    display: grid;
+grid-template-rows: 250vh 57vh ;/* Används för att beskriva hur stora varje grid-box ska vara 
+vh = view height */     
+}
+
+.header {
+    background-color: #1d1d1d;
+    background-size: cover;
+    margin: 0;
+}
+
+h1 {
+    font-size: 100px;
+    color: #fff;
+    text-align: center;
+    font-family: fantasy;
+    -webkit-text-stroke: 1px #F4A460;
+    margin-top: 150px;
+    margin-right: 0px;
+    margin-bottom: 200px;
+    margin-left: 0px;
+    /*margin: 150px 0px 200px 0px;  Använde det övre istället*/
+}
+h2 {
+    font-size: 35px;
+    color: #fff;
+   /* text-align: center;    Ligger i is element*/
+    font-family: fantasy;
+    -webkit-text-stroke: 1px #2B2D42;
+    margin: 100px;
+}
+main {
+    display: block;
+}
+p {
+    /*text-align: center;    Ligger i is element*/
+    color: antiquewhite;
+    font-size: 20px;
+    margin: 0px 100px;
+    line-height: 2;
+}
+:is( h2 p h4 #kontaktlista) { /* bestämmer att de här tagsen ska ha text-align : center */
+  text-align: center;
+}
+.knappar { 
+    display: flex;
+     justify-content: center; 
+     padding: 0px 250px;
+     /*padding-bottom: 50px;  Lade till 50 på padding så det blev 250*/
+ }
+
+ .knappar h4 {
+    text-align: center; 
+    color: #2b2d42;
+    font-size: 30px;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    /*margin: 100px 100px 50px 100px;    Ändrade detta till övre*/
+    padding: 5px 40px;  /* Försökte ändra till det under men gick ej*/
+    /*padding-top: 5px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 0px; */
+    font-family: fantasy;
+    background-color: papayawhip;
+    border: 3px solid #2B2D42;
+    border-radius: 10px;
+ }
+ 
+ .destination {
+    display: flex;
+    margin-top: 0px;
+    margin-right: 50px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    /*margin: 0px 50px;   Ändra till det övre*/
+ }
+ .destination img {
+    width: 100%;
+    transition: all 1s;
+ }
+ 
+
+ img:hover {
+   width: 102%; 
+    
+}
+.sidebar {
+    padding: 10px;
+    background-color: #000;
+   /* row-gap: 0px; */
+} 
+
+
+ #kontaktlista {
+    display: flex;
+    justify-content: center; 
+   /* text-align: center;    Ändrade med is ovanför */
+    padding: 200px;
+    margin: -10px 0px 0px 0px;/* verkar funka/*
+   /* margin-top: -10px; /* ´ändrade genom den ovanför */
+   /* margin-bottom: 0px;*/
+    
+  }
+  
+  
+#kontaktlista a {
+    font-size: 20px;
+    /*padding: 30px;  Ändra till det padding nedanför*/
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 1s;
+  }
+
+
+
+  #kontaktlista a:hover {
+    background-color: #2B2D42;
+  }
+
+  ul { 
+    list-style: none; 
+  }
+

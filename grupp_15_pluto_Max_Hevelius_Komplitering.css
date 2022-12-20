@@ -1,0 +1,245 @@
+html, 
+body{
+    margin: 0;
+    padding: 0;
+}
+.container { /* ANVÄNDER GRID,   */
+/*padding: 10px;     FLYTTAT ÖVER TILL EN is*/
+display: grid;
+
+grid-template-rows: 60vh 80vh 30vh;  /* bestämmer höjd här vh=view height*/
+}
+
+ .header {
+   /*background-color: black;  Upfyller ingen funktion, ska bort*/ 
+    padding: 10px;
+
+}
+.sidebar{
+    background-color: #f0ece4; 
+   /* padding: 10px; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    Flyttat över både padding och front-family till is*/
+}
+
+
+.content {
+    background-color: black; 
+  /*  padding: 10px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;     Flyttat över både padding och front-family till is*/
+}
+
+.sidebar :is(.content, .sidebar) { /*Ett is element, kan sortera samma kod for olika element här */
+    padding: 10px; /*Om man tar bort .sidbar innan is så tas en bit av sidebar bort av någon anledning */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+*/
+
+.bild{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+ 
+.opening{  /* Tidigare container- 2*/
+    display: flex;
+    padding: 0px 200px;
+    background-color: #000; /*Försökte sätta ihop en mängd av dessa i en is container men funkade ej */
+}
+
+.inledning { /* Tidigare venus */
+    width: 48%;
+    background-color: #000; 
+    text-align: center;
+}
+
+.inledning h1 {
+    font-family: tahoma;
+    font-size: 80px;
+    color: #4996c5;
+    margin-top: 70px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+   /* margin-left: 20px;    Flyttat över till is*/ 
+   /* margin: 70px 0px 0px 20px;    Bytte bort denna mot övre för att få annan kod*/
+    text-align: left;
+}
+.inledning p{
+    font-size: 22px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    text-align: left;
+   /* margin-left: 20px;  Flyttat över till is*/
+
+}
+.inledning :is(p h1){/*margin-left i p och h1 i .inledning öppnas här istället */
+    margin-left: 20px;
+}
+.bild {
+    width: 52%;
+    background-color: #000; 
+}
+
+.knappar {
+   display: flex;
+    justify-content: right; 
+    padding: 0px 200px;
+    background-color: #000; 
+    
+} 
+
+.knappar a {
+    font-size: 25px;
+    color: #fff;
+    padding: 10px 30px;
+    margin-right: 100px;
+    border: 3px solid #000;
+    border-radius: 18px;
+}
+
+.bild img {
+    margin-top: 20px;
+   /* margin: 20px 0px 0px 0px;  bytt ut till övre margin*/  } 
+
+
+    .maincontent{ /* tidigare container 4 */
+        display:flex;
+        padding: 0px 200px;
+    
+    }
+    .maincontent h2 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       /* margin-left: 20px;  Flyttat över till is*/
+        font-size: 35px;
+    }
+    .maincontent h3 {
+        color: #4996c5;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       /* margin-left: 20px; Flyttat över till is*/
+    }
+    .maincontent p{
+        display:flex;
+        color: #000; 
+      /*  margin-left: 20px; Flyttat över till is*/
+
+    
+    }
+    .container :is(h2,h3,p) { /*margin-left i subklasserna i klassen .container öppans här */
+        margin-left: 20px;
+    }
+    
+    .about {
+        width: 50%;
+        text-align: left; } 
+
+    .about a{
+        color: black;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px; 
+        padding-left: 0px;
+      /* padding: 10px 10px 10px 0px;  Bytte ut till övre*/
+       /* margin: 20px 0px 70px 0px;   Bytte till undre */
+        margin-top: 20px;
+        margin-right: 0px;
+        margin-bottom: 70px;
+        margin-left: 0px;
+    }
+    
+
+        .fakta {
+            display: flex;
+            width: 50%;
+        }
+        
+        a {
+            text-decoration: none;
+        } 
+        
+        p {
+            color: #000;
+        }
+
+        
+        .fakta-1 {   
+          width: 50%; 
+            text-align: right;
+           /* margin: 90px 0px;  Bytte ut till margin nedanför*/
+           margin-top: 90px;
+           margin-right: 0px;
+           margin-bottom: 0px;
+           margin-left: 0px;
+            color: #4996c5; 
+            line-height: 2;
+            font-weight: bold; 
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .fakta-2 {
+           width: 50%; 
+            text-align: left;
+           /* margin: 90px 0px;  Bytte ut till margin nedanför*/
+           margin-top: 90px;
+           margin-right: 0px;
+           margin-bottom: 0px;
+           margin-left: 20px;
+            color: #4996c5;
+            line-height: 2;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+            /*margin-left: 20px;  Flyttade upp denna*/
+        }
+        .fakta :is(.fakta-1 ul, fakta-2 ul){
+            padding: 5px 0px 5px 0px;
+        }
+        /*
+        .fakta-1 ul {
+            padding: 5px 0px 5px 0px;  Finns i is
+        }
+*/
+        
+.fakta-2 ul {
+    padding: 0px 0px 0px 18px; /* Ändra padding här från 5px 0px 5px 18px p.ga is elementet ovan  */
+    border-left: 2px solid #4996c5;
+}
+
+#kontaktlista {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 90px;
+    margin: 0;
+  }
+  
+  #kontaktlista a {
+    font-size: 17px;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+  }  
+  
+ a:hover {
+    background-color: #812c21;
+    transition: 1s;
+    
+  }
+ 
+  ul { 
+    
+    list-style: none; 
+  }
+ 
+  
+a { 
+    list-style: none; 
+  } 
+  
+  /*
+footer {
+    background-color: #000; LADE TILL DENNA TILL .content
+   
+} 
+/*
+/*
+.h1{
+    color:black;
+}                                          Färgen FINNS REDAN i en annan tag
+*/
